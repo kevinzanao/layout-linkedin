@@ -15,3 +15,123 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fundo-escuro);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile {
+    min-width: 60%; 
+    min-height: 468px;
+    display: flex;
+    align-items: flex-end;
+    gap: 1em;
+    border-radius: 1.5rem;
+    background-color: var(--fundo-card);
+    background-image: url('./assets/images/Imagem\ de\ capa.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 45%;
+    padding: 2em;
+}
+
+.user-profile__information__user-image img {
+    width: 30%;
+    border-radius: 50%;
+    border: 5px solid var(--fundo-card);
+    margin-bottom: .5em;
+}
+
+.user-profile__information h2,
+.user-profile__information h2 + p,
+.user-profile__career-details p,
+.user-profile__information__connections,
+.user-profile__information__contact  {
+    margin-bottom : .5em;
+}
+
+.user-profile__information h2 {
+    font-size: 1em;
+}
+
+.user-profile__information h1,
+.user-profile__information h2,
+.user-profile__career-details p {
+    color: var(--texto-principal);
+}
+
+.user-profile__information h2 + p,
+.user-profile__information__contact p {
+    color: var(--texto-secundario);
+}
+
+.user-profile__information__contact a,
+.user-profile__information__contact a p,
+.user-profile__information__connections a,
+.user-profile__information__connections a p,
+.user-profile__information__actions .actions__more-button {
+    color: var(--primario);
+    text-decoration: none;
+}
+
+.user-profile__information h2 + p,
+.user-profile__information__contact p,
+.user-profile__information__connections a p,
+.user-profile__information__actions .actions__more-button {
+    font-size: .8em;
+}
+
+.ellipse {
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: var(--texto-secundario);
+}
+
+.user-profile__information__contact {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.user-profile__information__connections {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.user-profile__information__actions {
+    display: flex;
+    width: 265px;
+    gap: .5em;
+}
+
+.user-profile__information__actions button {
+    flex: 1;
+    padding: .5em;
+    border-radius: 2em;
+    background-color: transparent;
+    border: 1px solid var(--primario);
+}
+
+.user-profile__information__actions .actions__mensage-button {
+    background-color: var(--primario);
+}
+
+.user-profile__career-details {
+    min-width: 40%;
+    margin-bottom: 3.2em;
+}
+
+.user-profile__career-details__career {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 1em 0;
+}
