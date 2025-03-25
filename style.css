@@ -42,7 +42,7 @@ main {
 }
 
 .user-profile__information__user-image img {
-    width: 30%;
+    width: 40%;
     border-radius: 50%;
     border: 5px solid var(--fundo-card);
     margin-bottom: .5em;
