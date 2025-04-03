@@ -21,6 +21,93 @@ body {
     background-color: var(--fundo-escuro);
 }
 
+header {
+    background-color: var(--fundo-card);
+    margin-bottom: 2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.navbar__left {
+    min-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.navbar__left .navbar__search {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    background-color: var(--input);
+    border-radius: 3px;
+    padding: .4em 1em;
+}
+
+.navbar__left .navbar__search input {
+    border: none;
+    outline: none;
+    color: var(--texto-principal);
+    background-color: transparent;
+    margin-left: .8em;
+}
+
+.navbar__left .navbar__search input::placeholder {
+    color: var(--texto-principal);
+}
+
+.navbar__left .navbar__search input:focus::placeholder {
+    color: transparent;
+}
+
+.navbar__right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.navbar__right nav {
+    width: 80%;
+}
+
+.navbar__right nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-right: 1em;
+    gap: 2em;
+    justify-content: flex-end;
+}
+
+.navbar__right nav ul li {
+}
+
+.navbar__right nav ul li a,
+.navbar__right .navbar__right__solutions {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-size: .7em;
+}
+
+.navbar__right .navbar__right__solutions {
+    height: 100%;
+    border-left: 1px solid var(--texto-principal);
+    padding: 1em 0;
+}
+
+.navbar__right .navbar__right__solutions img,
+.navbar__right .navbar__right__solutions p {
+
+     margin-left: 1em
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -134,4 +221,19 @@ main {
     align-items: center;
     gap: 1em;
     margin: 1em 0;
+}
+
+
+
+/* Responsividade */
+
+@media screen and (max-width: 865px) {
+    .navbar__left {
+        justify-content: flex-start;
+        padding-left: 3em;
+    }   
+
+    .navbar__left .navbar__search {
+        width: 70%;
+    }
 }
