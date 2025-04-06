@@ -126,6 +126,7 @@ main {
     background-repeat: no-repeat;
     background-size: 100% 45%;
     padding: 2em;
+    margin-bottom: 1em;
 }
 
 .user-profile__information__user-image img {
@@ -222,6 +223,75 @@ main {
     gap: 1em;
     margin: 1em 0;
 }
+
+.featured-content {
+    width: 60%;
+    min-width: 698px;
+    background-color: var(--fundo-card);
+    border-radius: 1.5em;
+    margin-bottom: 4em;
+    margin: 0 auto;
+}
+
+.featured-content h2 {
+    color: var(--texto-principal);
+    margin: .5em 0 .5em 1em;
+    font-weight: lighter;
+}
+
+.featured-content__posts {
+    display: flex;
+    margin: 0 1em;
+    gap: .5em;
+}
+
+.featured-content__posts article {
+    min-width: 30%;
+    border: 1px solid var(--texto-secundario);
+    border-radius: 10px;
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+
+.featured-content__posts article h4 {
+    color: var(--texto-principal);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.featured-content__posts article p {
+    color: var(--texto-secundario);
+    font-size: .9em;
+}
+
+.featured-content__posts article > p {
+    margin-left: 1em;
+}
+
+.featured-content__posts article h4 {
+    margin: .5em 1em;
+}
+
+.featured-content__posts article > img {
+    width: 100%;
+    /* border-radius: 20px; */
+    object-fit: cover;
+}
+
+.featured-content__posts article .featured-content__reactions {
+    display: flex;
+    justify-content: space-between;
+    margin: .5em;
+}
+
+.featured-content__posts article .featured-content__reactions div {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+
 
 
 
