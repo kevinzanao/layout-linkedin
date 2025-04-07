@@ -176,8 +176,9 @@ main {
 }
 
 .ellipse {
-    height: 2px;
-    width: 2px;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
     border-radius: 50%;
     background-color: var(--texto-secundario);
 }
@@ -229,8 +230,7 @@ main {
     min-width: 698px;
     background-color: var(--fundo-card);
     border-radius: 1.5em;
-    margin-bottom: 4em;
-    margin: 0 auto;
+    margin-bottom: 1em;
 }
 
 .featured-content h2 {
@@ -291,9 +291,81 @@ main {
     gap: 1px;
 }
 
+.activities {
+    width: 60%;
+    min-width: 698px;
+    background-color: var(--fundo-card);
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+}
+
+.activities h2 {
+    color: var(--texto-principal);
+    margin: .5em 0 .3em 1em;
+}
+
+.activities a {
+    text-decoration: none;
+}
+
+.activities a p{
+    text-decoration: none;
+    color: var(--primario);
+    margin: 0 0 1.4em 1.4em;
+}
+
+.activities__posts {
+    margin: 0 1.4em;
+}
+
+.activities__posts article {
+}
+
+.activities__posts > p {
+    width: fit-content;
+    margin: 0 auto;
+    padding: .3em 0 .7em 0;
+}
+
+.activities__posts p,
+.activities__posts article p {
+    color: var(--texto-secundario);
+}
+
+.activities__posts article > p {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+
+.activities__posts article div {
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    gap: 1em;
+}
+
+.activities__posts article div img {
+    /* max-width: 20%; */
+}
 
 
+.activities__posts article div p {
+    overflow: hidden; /* remove barra de rolagem */
+    text-overflow: ellipsis; /* adiciona '...' ao final do texto */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Quantidade de linhas mostradas */
+    -webkit-box-orient: vertical; /* direção do corte */
+    margin: .3em 0;
+}
 
+.activities__posts article .activities__posts__reactions {
+    justify-content: space-between;
+    margin: .5em 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--texto-secundario);
+}
 
 /* Responsividade */
 
