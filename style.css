@@ -8,7 +8,14 @@
     --input: #38434F;
     --primario: #70b5f9;
     --positivo: #3ec786;
+
+    /* Fonts */
+    --size-h2: 1.3em;
+    --size-p: .9em;
+    --size-secundario: .8em;
 }
+
+
 
 * {
     margin: 0;
@@ -235,8 +242,9 @@ main {
 
 .featured-content h2 {
     color: var(--texto-principal);
-    margin: .5em 0 .5em 1em;
+    margin: 1em 0 .5em 1em;
     font-weight: lighter;
+    font-size: var(--size-h2);
 }
 
 .featured-content__posts {
@@ -258,19 +266,18 @@ main {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin: .5em .9em;
+    font-size: var(--size-p);
+    font-weight: lighter;
 }
 
 .featured-content__posts article p {
     color: var(--texto-secundario);
-    font-size: .9em;
+    font-size: var(--size-secundario);
 }
 
 .featured-content__posts article > p {
     margin-left: 1em;
-}
-
-.featured-content__posts article h4 {
-    margin: .5em 1em;
 }
 
 .featured-content__posts article > img {
@@ -301,7 +308,9 @@ main {
 
 .activities h2 {
     color: var(--texto-principal);
-    margin: .5em 0 .3em 1em;
+    margin: 1em 0 .5em 1em;
+    font-weight: lighter;
+    font-size: var(--size-h2);
 }
 
 .activities a {
@@ -312,6 +321,7 @@ main {
     text-decoration: none;
     color: var(--primario);
     margin: 0 0 1.4em 1.4em;
+    font-size: var(--size-p);
 }
 
 .activities__posts {
@@ -325,6 +335,7 @@ main {
     width: fit-content;
     margin: 0 auto;
     padding: .3em 0 .7em 0;
+    font-size: var(--size-p);
 }
 
 .activities__posts p,
@@ -334,9 +345,11 @@ main {
 
 .activities__posts article > p {
     margin-bottom: 1em;
+    margin-top: 1em;
     display: flex;
     align-items: center;
     gap: .3em;
+    font-size: var(--size-p);
 }
 
 .activities__posts article div {
@@ -357,7 +370,9 @@ main {
     display: -webkit-box;
     -webkit-line-clamp: 3; /* Quantidade de linhas mostradas */
     -webkit-box-orient: vertical; /* direção do corte */
-    margin: .3em 0;
+    margin: .4em 0;
+    font-size: var(--size-p);
+    color: var(--texto-principal);
 }
 
 .activities__posts article .activities__posts__reactions {
@@ -365,6 +380,15 @@ main {
     margin: .5em 0;
     padding-bottom: .5em;
     border-bottom: 1px solid var(--texto-secundario);
+}
+
+.activities__posts article .activities__posts__reactions p {
+    color: var(--texto-secundario);
+    font-size: var(--size-secundario);
+}
+
+.activities__posts article .activities__posts__reactions > div {
+    gap: .2em;
 }
 
 .about {
@@ -379,6 +403,7 @@ main {
 .about h2 {
     margin: 1em 0 .5em 1em;
     font-size: 1.3em;
+    font-weight: lighter;
 }
 
 .about p {
