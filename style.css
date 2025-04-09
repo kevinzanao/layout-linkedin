@@ -367,6 +367,29 @@ main {
     border-bottom: 1px solid var(--texto-secundario);
 }
 
+.about {
+    width: 60%;
+    min-width: 698px;
+    background-color: var(--fundo-card);
+    color: var(--texto-principal);
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+}
+
+.about h2 {
+    margin: 1em 0 .5em 1em;
+    font-size: 1.3em;
+}
+
+.about p {
+    margin: 1em 1.5em;
+    text-align: justify;
+    font-size: .9em;
+}
+
+
+
+
 /* Responsividade */
 
 @media screen and (max-width: 865px) {
