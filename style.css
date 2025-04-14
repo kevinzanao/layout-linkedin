@@ -545,7 +545,41 @@ main {
 }
 
 
+.languages {
+    width: 60%;
+    min-width: 698px;
+    border-radius: 1.5em;
+    margin-bottom: 3em;
+    background-color: var(--fundo-card);
+}
 
+.languages h2 {
+    margin: 1em 0 .5em 1em;
+    color: var(--texto-principal);
+    font-size: var(--size-h2);
+    font-weight: lighter;
+}
+
+.languages .languages__levels {
+    margin: 0 0 1em 1.2em;
+}
+
+.languages .languages__levels:not(:last-child) {
+    border-bottom: 1px solid var(--texto-secundario);
+    padding-bottom: 1em;
+    margin-right: 3em;
+}
+
+.languages .languages__levels h3 {
+    color: var(--texto-principal);
+    font-size: 1em;
+    /* font-weight: lighter; */
+}
+
+.languages .languages__levels span {
+    color: var(--texto-secundario);
+    font-size: var(--size-p);
+}
 
 
 
