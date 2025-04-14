@@ -417,6 +417,7 @@ main {
     width: 60%;
     min-width: 698px;
     border-radius: 1.5em;
+    margin-bottom: 1em;
 }
 
 .experiences h2 {
@@ -498,6 +499,52 @@ main {
     align-items: center;
     gap: .4em;
 }
+
+.academic-background {
+    width: 60%;
+    min-width: 698px;
+    border-radius: 1.5em;
+    background-color: var(--fundo-card);
+    margin-bottom: 1em;
+}
+
+.academic-background h2 {
+    color: var(--texto-principal);
+    margin: 1em 0 .5em 1em;
+    font-size: var(--size-h2);
+    font-weight: lighter;
+}
+
+.academic-background .institution {
+    display: flex;
+    margin-left: 1.3em;
+    margin-bottom: 1.5em;
+    gap: 1em;
+}
+
+.academic-background .institution div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.academic-background .institution div h3 {
+    color: var(--texto-principal);
+    font-size: 1em;
+    /* font-weight: lighter; */
+}
+
+.academic-background .institution div h3 + span {
+    color: var(--texto-principal);
+    font-size: var(--size-p);
+}
+
+.academic-background .institution div span + span {
+    color: var(--texto-secundario);
+    font-size: var(--size-p);
+}
+
+
 
 
 
