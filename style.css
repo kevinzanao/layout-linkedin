@@ -412,6 +412,97 @@ main {
     font-size: .9em;
 }
 
+.experiences {
+    background-color: var(--fundo-card);
+    width: 60%;
+    min-width: 698px;
+    border-radius: 1.5em;
+}
+
+.experiences h2 {
+    color: var(--texto-principal);
+    margin: 1em 0 .5em 1em;
+    font-weight: lighter;
+    font-size: var(--size-h2);
+}
+
+.experiences__jobs {
+    margin: 0 0 2em 1.3em;
+}
+
+.experiences__jobs-worked {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: .5em;
+}
+
+.experiences__jobs-worked div h3 {
+    color: var(--texto-principal);
+    font-size: 1em;
+}
+
+.experiences__jobs-worked div p {
+    color: var(--texto-secundario);
+    font-size: var(--size-p);
+}
+
+.experiences__position__list li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: .5em;
+}
+
+.experiences__position__list li .experiences__position__left-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    padding: 0 1.2em;
+}
+
+.experiences__position__list li .experiences__position__left-details .circle {
+    display: inline-block;
+    height: .6em;
+    width: .6em;
+    border-radius: 50%;
+    background-color: var(--texto-principal);
+}
+
+.experiences__position__list li .experiences__position__left-details .vertical-line {
+    display: inline-block;
+    height: 3em;
+    width: 1px;
+    background-color: var(--texto-principal);
+}
+
+.experiences__position__list li .experiences__jobs__position {
+    display: flex;
+    flex-direction: column;
+}
+
+.experiences__position__list li .experiences__jobs__position h4,
+.experiences__position__list li .experiences__jobs__position h4 + span {
+    color: var(--texto-principal);
+}
+
+.experiences__position__list li .experiences__jobs__position h4 + span {
+    font-size: var(--size-p);
+}
+
+.experiences__position__list li .experiences__jobs__position span + span {
+    color: var(--texto-secundario);
+    font-size: var(--size-p);
+    display: flex;
+    align-items: center;
+    gap: .4em;
+}
+
+
+
+
+
 
 
 
