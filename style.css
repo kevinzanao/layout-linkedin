@@ -48,7 +48,7 @@ header {
 }
 
 .navbar__left .navbar__search {
-    width: 60%;
+    /* width: 60%; */
     display: flex;
     align-items: center;
     background-color: var(--input);
@@ -116,13 +116,22 @@ header {
 }
 
 main {
+    width: 90%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.left-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column; 
     align-items: center;
 }
 
 .user-profile {
-    min-width: 60%; 
+    width: 100%; 
     min-height: 468px;
     display: flex;
     align-items: flex-end;
@@ -233,8 +242,9 @@ main {
 }
 
 .featured-content {
-    width: 60%;
-    min-width: 698px;
+    width: 100%;
+    flex: 1;
+    /* min-width: 698px; */
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -299,8 +309,9 @@ main {
 }
 
 .activities {
-    width: 60%;
-    min-width: 698px;
+    flex: 1;
+    /* width: 60%; */
+    /* min-width: 698px; */
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -392,8 +403,9 @@ main {
 }
 
 .about {
-    width: 60%;
-    min-width: 698px;
+    flex: 1;
+    /* width: 60%; */
+    /* min-width: 698px; */
     background-color: var(--fundo-card);
     color: var(--texto-principal);
     margin-bottom: 1em;
@@ -413,9 +425,10 @@ main {
 }
 
 .experiences {
+    flex: 1;
+    width: 100%;
+    /* min-width: 698px; */
     background-color: var(--fundo-card);
-    width: 60%;
-    min-width: 698px;
     border-radius: 1.5em;
     margin-bottom: 1em;
 }
@@ -501,8 +514,9 @@ main {
 }
 
 .academic-background {
-    width: 60%;
-    min-width: 698px;
+    flex: 1;
+    width: 100%;
+    /* min-width: 698px; */
     border-radius: 1.5em;
     background-color: var(--fundo-card);
     margin-bottom: 1em;
@@ -546,8 +560,9 @@ main {
 
 
 .languages {
-    width: 60%;
-    min-width: 698px;
+    flex: 1;
+    width: 100%;
+    /* min-width: 698px; */
     border-radius: 1.5em;
     margin-bottom: 3em;
     background-color: var(--fundo-card);
@@ -581,13 +596,93 @@ main {
     font-size: var(--size-p);
 }
 
+.more-connections {
+    flex: 1;
+    height: fit-content;
+    width: 10%;
+    background-color: var(--fundo-card);
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
 
+
+.more-connections .also-viewed h2 {
+    color: var(--texto-principal);
+    font-weight: lighter;
+    font-size: 1em;
+    margin: 1em 0 0 1em;
+}
+
+.more-connections .also-viewed .users-list .user {
+    margin: 1em 1em 0 1em;
+    list-style: none;
+}
+
+.more-connections .also-viewed .users-list .user .send-message {
+    border: none;
+    padding: .5em 1em;
+    font-size: var(--size-p);
+    margin: 1em 0 .5em 3.5rem;
+    border-radius: 25px;
+    color: var(--texto-principal);
+    background-color: transparent;
+    border: 1px solid var(--texto-principal);
+}
+
+.more-connections .also-viewed .users-list .user > div {
+    display: flex;
+    gap: .5em;
+    /* width: 320px; */
+}
+
+.more-connections .also-viewed .users-list .user div img {
+    min-width: 48px;
+    height: 48px;
+}
+
+.more-connections .also-viewed .users-list .user div p {
+    color: var(--texto-principal);
+    font-size: var(--size-p);
+    
+}
+
+.more-connections .also-viewed .users-list .user div span {
+    color: var(--texto-secundario);
+    font-size: var(--size-secundario);
+}
 
 
 
 
 
 /* Responsividade */
+
+@media screen and (max-width: 1024px) {
+
+    .more-connections .also-viewed h2 {
+        width: fit-content;
+        margin: 1em 1em 0 .8em;
+        
+    }
+
+    .more-connections .also-viewed .users-list .user {
+        margin: 1em .5em 0 .5em;
+    }    
+
+    .more-connections .also-viewed .users-list .user div p {
+        padding-right: 3em;
+    }
+
+    .more-connections .also-viewed .users-list .user div span {
+        display: none;
+    }
+
+    .more-connections .also-viewed .users-list .user .send-message {
+        margin: 1em 0;
+    }
+
+}
 
 @media screen and (max-width: 865px) {
     .navbar__left {
