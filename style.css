@@ -48,7 +48,6 @@ header {
 }
 
 .navbar__left .navbar__search {
-    /* width: 60%; */
     display: flex;
     align-items: center;
     background-color: var(--input);
@@ -244,7 +243,6 @@ main {
 .featured-content {
     width: 100%;
     flex: 1;
-    /* min-width: 698px; */
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -292,7 +290,6 @@ main {
 
 .featured-content__posts article > img {
     width: 100%;
-    /* border-radius: 20px; */
     object-fit: cover;
 }
 
@@ -310,8 +307,6 @@ main {
 
 .activities {
     flex: 1;
-    /* width: 60%; */
-    /* min-width: 698px; */
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -404,8 +399,6 @@ main {
 
 .about {
     flex: 1;
-    /* width: 60%; */
-    /* min-width: 698px; */
     background-color: var(--fundo-card);
     color: var(--texto-principal);
     margin-bottom: 1em;
@@ -427,7 +420,6 @@ main {
 .experiences {
     flex: 1;
     width: 100%;
-    /* min-width: 698px; */
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -516,7 +508,6 @@ main {
 .academic-background {
     flex: 1;
     width: 100%;
-    /* min-width: 698px; */
     border-radius: 1.5em;
     background-color: var(--fundo-card);
     margin-bottom: 1em;
@@ -545,7 +536,6 @@ main {
 .academic-background .institution div h3 {
     color: var(--texto-principal);
     font-size: 1em;
-    /* font-weight: lighter; */
 }
 
 .academic-background .institution div h3 + span {
@@ -562,7 +552,6 @@ main {
 .languages {
     flex: 1;
     width: 100%;
-    /* min-width: 698px; */
     border-radius: 1.5em;
     margin-bottom: 3em;
     background-color: var(--fundo-card);
@@ -588,7 +577,6 @@ main {
 .languages .languages__levels h3 {
     color: var(--texto-principal);
     font-size: 1em;
-    /* font-weight: lighter; */
 }
 
 .languages .languages__levels span {
@@ -596,10 +584,16 @@ main {
     font-size: var(--size-p);
 }
 
-.more-connections {
-    flex: 1;
+.right-side-connections {
     height: fit-content;
-    width: 10%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.more-connections,
+.recommended {
+    flex: 1;
     background-color: var(--fundo-card);
     border-radius: 1.5em;
     margin-bottom: 1em;
@@ -607,49 +601,63 @@ main {
 }
 
 
-.more-connections .also-viewed h2 {
+.more-connections .also-viewed h2,
+.recommended__people h2 {
     color: var(--texto-principal);
     font-weight: lighter;
     font-size: 1em;
     margin: 1em 0 0 1em;
 }
 
-.more-connections .also-viewed .users-list .user {
+.more-connections .also-viewed .users-list .user,
+.recommended .recommended__people .people-list .people {
     margin: 1em 1em 0 1em;
     list-style: none;
+    overflow: hidden;
 }
 
-.more-connections .also-viewed .users-list .user .send-message {
+.more-connections .also-viewed .users-list .user .send-message,
+.recommended .recommended__people .people-list .people .connect {
     border: none;
-    padding: .5em 1em;
+    padding: .4em 1em;
     font-size: var(--size-p);
-    margin: 1em 0 .5em 3.5rem;
+    margin: .5em 0 0 3.5rem;
     border-radius: 25px;
     color: var(--texto-principal);
     background-color: transparent;
     border: 1px solid var(--texto-principal);
 }
 
-.more-connections .also-viewed .users-list .user > div {
+.more-connections .also-viewed .users-list .user > div,
+.recommended .recommended__people .people-list .people > div {
     display: flex;
     gap: .5em;
-    /* width: 320px; */
+    height: 48px;
 }
 
-.more-connections .also-viewed .users-list .user div img {
+.more-connections .also-viewed .users-list .user div img,
+.recommended .recommended__people .people-list .people div img {
     min-width: 48px;
     height: 48px;
 }
 
-.more-connections .also-viewed .users-list .user div p {
+.more-connections .also-viewed .users-list .user div p,
+.recommended .recommended__people .people-list .people div p {
     color: var(--texto-principal);
     font-size: var(--size-p);
     
 }
 
-.more-connections .also-viewed .users-list .user div span {
+.more-connections .also-viewed .users-list .user div span,
+.recommended .recommended__people .people-list .people div span {
+    display: flex;
     color: var(--texto-secundario);
     font-size: var(--size-secundario);
+    overflow: hidden; /* remove barra de rolagem */
+    text-overflow: ellipsis; /* adiciona '...' ao final do texto */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Quantidade de linhas mostradas */
+    -webkit-box-orient: vertical; /* direção do corte */
 }
 
 
@@ -660,25 +668,35 @@ main {
 
 @media screen and (max-width: 1024px) {
 
-    .more-connections .also-viewed h2 {
+    .more-connections .also-viewed h2,
+    .recommended .recommended__people h2 {
         width: fit-content;
         margin: 1em 1em 0 .8em;
         
     }
 
-    .more-connections .also-viewed .users-list .user {
+    .more-connections .also-viewed .users-list .user,
+    .recommended .recommended__people .people-list .people {
         margin: 1em .5em 0 .5em;
     }    
 
-    .more-connections .also-viewed .users-list .user div p {
+    .more-connections .also-viewed .users-list .user div div,
+    .recommended .recommended__people .people-list .people div div {
+        align-self: center;
+    }
+
+    .more-connections .also-viewed .users-list .user div p,
+    .recommended .recommended__people .people-list .people div p {
         padding-right: 3em;
     }
 
-    .more-connections .also-viewed .users-list .user div span {
+    .more-connections .also-viewed .users-list .user div span,
+    .recommended .recommended__people .people-list .people div span {
         display: none;
     }
 
-    .more-connections .also-viewed .users-list .user .send-message {
+    .more-connections .also-viewed .users-list .user .send-message,
+    .recommended .recommended__people .people-list .people .connect {
         margin: 1em 0;
     }
 
