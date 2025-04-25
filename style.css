@@ -43,8 +43,8 @@ header {
     min-width: 40%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 1em;
+    padding: 1em 0 1em 6%;
 }
 
 .navbar__left .navbar__search {
@@ -92,9 +92,6 @@ header {
     justify-content: flex-end;
 }
 
-.navbar__right nav ul li {
-}
-
 .navbar__right nav ul li a,
 .navbar__right .navbar__right__solutions {
     text-decoration: none;
@@ -140,11 +137,13 @@ main {
     background-image: url('./assets/images/Imagem\ de\ capa.jpg');
     background-repeat: no-repeat;
     background-size: 100% 45%;
-    padding: 2em;
+    padding: 8em 2em 2em 1.5em;
     margin-bottom: 1em;
 }
 
 .user-profile__information__user-image img {
+    max-width: 172px;
+    min-width: 128px;
     width: 40%;
     border-radius: 50%;
     border: 5px solid var(--fundo-card);
@@ -297,6 +296,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin: .5em;
+    gap: 1em;
 }
 
 .featured-content__posts article .featured-content__reactions div {
@@ -364,11 +364,6 @@ main {
     justify-content: center;
     gap: 1em;
 }
-
-.activities__posts article div img {
-    /* max-width: 20%; */
-}
-
 
 .activities__posts article div p {
     overflow: hidden; /* remove barra de rolagem */
@@ -548,7 +543,6 @@ main {
     font-size: var(--size-p);
 }
 
-
 .languages {
     flex: 1;
     width: 100%;
@@ -633,6 +627,7 @@ main {
     display: flex;
     gap: .5em;
     height: 48px;
+    width: fit-content;
 }
 
 .more-connections .also-viewed .users-list .user div img,
@@ -668,11 +663,24 @@ main {
 
 @media screen and (max-width: 1024px) {
 
+    .navbar__left {
+        padding-left: 4%;
+    }
+    
+    main {
+        width: 95%;
+        gap: 1em;
+    }
+
+    .featured-content__posts article .featured-content__reactions div p,
+    .featured-content__posts article .featured-content__reactions div + p span {
+        display: none;
+    }
+
     .more-connections .also-viewed h2,
     .recommended .recommended__people h2 {
         width: fit-content;
         margin: 1em 1em 0 .8em;
-        
     }
 
     .more-connections .also-viewed .users-list .user,
@@ -683,11 +691,6 @@ main {
     .more-connections .also-viewed .users-list .user div div,
     .recommended .recommended__people .people-list .people div div {
         align-self: center;
-    }
-
-    .more-connections .also-viewed .users-list .user div p,
-    .recommended .recommended__people .people-list .people div p {
-        padding-right: 3em;
     }
 
     .more-connections .also-viewed .users-list .user div span,
@@ -705,10 +708,60 @@ main {
 @media screen and (max-width: 865px) {
     .navbar__left {
         justify-content: flex-start;
-        padding-left: 3em;
     }   
 
     .navbar__left .navbar__search {
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar__left {
+        width: 90%;
+    }
+
+    .navbar__left .navbar__search {
+        width: 100%;
+    }
+
+    .navbar__right {
+        display: none;
+    }      
+
+    .user-profile {
+        display: block;
+        padding: 13em 2em 2em 1.5em;
+    }
+
+    .user-profile__information {
+        margin-bottom: 2em;
+    }
+
+    .user-profile__information__user-image img {
+        max-width: 136px;
+    }
+
+    .left-content {
+        width: 95%;
+    }
+
+    .user-profile__career-details {
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .right-side-connections {
+        display: none;
+    }
+
+    .featured-content__posts article p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .user-profile {
+        padding: 15em 2em 2em 1.5em;
     }
 }
