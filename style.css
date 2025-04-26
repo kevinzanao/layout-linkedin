@@ -48,6 +48,7 @@ header {
 }
 
 .navbar__left .navbar__search {
+    width: 90%;
     display: flex;
     align-items: center;
     background-color: var(--input);
@@ -589,7 +590,7 @@ main {
 .recommended {
     flex: 1;
     background-color: var(--fundo-card);
-    border-radius: 1  em;
+    border-radius: 1em;
     margin-bottom: 1em;
     padding-bottom: 1em;
 }
