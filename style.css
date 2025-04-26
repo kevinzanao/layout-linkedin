@@ -756,7 +756,7 @@ main {
         display: none;
     }
 
-    .featured-content__posts article p {
+    .featured-content__posts article .featured-content__reactions p {
         display: none;
     }
 }
